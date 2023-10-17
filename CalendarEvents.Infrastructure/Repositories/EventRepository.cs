@@ -1,18 +1,18 @@
-﻿using CalendarEvents.Constants;
-using CalendarEvents.Contexts;
-using CalendarEvents.Entities;
-using CalendarEvents.Interfaces;
-using CalendarEvents.Models.RequestModels;
-using CalendarEvents.Models.ResponseModels;
+﻿using CalendarEvents.Application.Interfaces;
+using CalendarEvents.Application.Models.RequestModels;
+using CalendarEvents.Application.Models.ResponseModels;
+using CalendarEvents.Common.Constants;
+using CalendarEvents.Domain.Entities;
+using CalendarEvents.Infrastructure.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace CalendarEvents.Services
+namespace CalendarEvents.Infrastructure.Repositories
 {
-    public class EventService : IEventService
+    public class EventRepository : IEventRepository
     {
         private readonly CalendarEventsDbContext _dbContext;
 
-        public EventService(CalendarEventsDbContext dbContext)
+        public EventRepository(CalendarEventsDbContext dbContext)
         {
             _dbContext = dbContext;
         }

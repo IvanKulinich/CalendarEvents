@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CalendarEvents.Models.RequestModels
+namespace CalendarEvents.Application.Models.RequestModels
 {
     public class CreateEventsRequestModel
     {

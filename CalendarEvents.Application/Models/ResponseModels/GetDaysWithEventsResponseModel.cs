@@ -1,4 +1,4 @@
-﻿namespace CalendarEvents.Models.ResponseModels
+﻿namespace CalendarEvents.Application.Models.ResponseModels
 {
     public class GetDaysWithEventsResponseModel
     {

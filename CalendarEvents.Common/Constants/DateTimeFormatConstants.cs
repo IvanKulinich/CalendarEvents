@@ -1,4 +1,4 @@
-﻿namespace CalendarEvents.Constants
+﻿namespace CalendarEvents.Common.Constants
 {
     public static class DateTimeFormatConstants
     {

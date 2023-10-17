@@ -3,7 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarEvents", "CalendarEvents\CalendarEvents.csproj", "{56888FAE-5E47-4843-9975-CFAD34D71852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalendarEvents.API", "CalendarEvents\CalendarEvents.API.csproj", "{56888FAE-5E47-4843-9975-CFAD34D71852}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD934AEF-83B8-45AF-9F4B-546524FA0CD8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarEvents.Domain", "CalendarEvents.Domain\CalendarEvents.Domain.csproj", "{EEAEA02F-F661-4C45-BE9B-DCF355A4BB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarEvents.Application", "CalendarEvents.Application\CalendarEvents.Application.csproj", "{D6AF9B62-DD4F-4FAB-85F3-3590BEC4B949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarEvents.Infrastructure", "CalendarEvents.Infrastructure\CalendarEvents.Infrastructure.csproj", "{650E372A-7687-47DA-86AF-44D1575EB657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarEvents.Common", "CalendarEvents.Common\CalendarEvents.Common.csproj", "{78016C3A-CE94-4579-9E21-EFF7BAAD4655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +28,22 @@ Global
 		{56888FAE-5E47-4843-9975-CFAD34D71852}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56888FAE-5E47-4843-9975-CFAD34D71852}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56888FAE-5E47-4843-9975-CFAD34D71852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAEA02F-F661-4C45-BE9B-DCF355A4BB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAEA02F-F661-4C45-BE9B-DCF355A4BB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAEA02F-F661-4C45-BE9B-DCF355A4BB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAEA02F-F661-4C45-BE9B-DCF355A4BB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AF9B62-DD4F-4FAB-85F3-3590BEC4B949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AF9B62-DD4F-4FAB-85F3-3590BEC4B949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AF9B62-DD4F-4FAB-85F3-3590BEC4B949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AF9B62-DD4F-4FAB-85F3-3590BEC4B949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650E372A-7687-47DA-86AF-44D1575EB657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650E372A-7687-47DA-86AF-44D1575EB657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650E372A-7687-47DA-86AF-44D1575EB657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650E372A-7687-47DA-86AF-44D1575EB657}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78016C3A-CE94-4579-9E21-EFF7BAAD4655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78016C3A-CE94-4579-9E21-EFF7BAAD4655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78016C3A-CE94-4579-9E21-EFF7BAAD4655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78016C3A-CE94-4579-9E21-EFF7BAAD4655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

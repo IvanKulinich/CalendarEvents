@@ -1,6 +1,7 @@
-using CalendarEvents.Contexts;
-using CalendarEvents.Interfaces;
-using CalendarEvents.Services;
+using CalendarEvents.Application.Interfaces;
+using CalendarEvents.Application.Services;
+using CalendarEvents.Infrastructure.Contexts;
+using CalendarEvents.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
@@ -13,6 +14,7 @@ builder.Services.AddControllers()
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddTransient<IEventService, EventService>();
 builder.Services.AddEntityFrameworkNpgsql()
     .AddDbContext<CalendarEventsDbContext>(x => x.UseNpgsql(builder.Configuration.GetConnectionString("DefaultDbConnection")));

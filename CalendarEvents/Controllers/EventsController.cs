@@ -1,11 +1,11 @@
-﻿using CalendarEvents.Interfaces;
-using CalendarEvents.Models.RequestModels;
-using CalendarEvents.Models.ResponseModels;
+﻿using CalendarEvents.Application.Interfaces;
+using CalendarEvents.Application.Models.RequestModels;
+using CalendarEvents.Application.Models.ResponseModels;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Net;
 
-namespace CalendarEvents.Controllers
+namespace CalendarEvents.API.Controllers
 {
     [Route("api/events")]
     [ApiController]

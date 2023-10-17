@@ -1,7 +1,7 @@
-﻿using CalendarEvents.Models.RequestModels;
-using CalendarEvents.Models.ResponseModels;
+﻿using CalendarEvents.Application.Models.RequestModels;
+using CalendarEvents.Application.Models.ResponseModels;
 
-namespace CalendarEvents.Interfaces
+namespace CalendarEvents.Application.Interfaces
 {
     public interface IEventService
     {
