@@ -19,19 +19,17 @@ namespace CalendarEvents.Infrastructure.Repositories
 
         public async Task AddEventsAsync(CreateEventsRequestModel model)
         {
-            IEnumerable<Event> addedEvents = model.Events.Select(m => new Event
+            await _dbContext.Events.AddRangeAsync(model.Events.Select(m => new Event
             {
                 Title = m.Title,
                 Date = model.Date
-            });
-
-            await _dbContext.Events.AddRangeAsync(addedEvents);
-            await _dbContext.SaveChangesAsync();
+            }));
         }
 
-        public async Task<List<GetDaysWithEventsResponseModel>> GetAllDaysWithEventsByMonth(GetDaysWithEventsRequestModel model)
+        public async Task<List<GetDaysWithEventsResponseModel>> GetByMonthAsync(GetDaysWithEventsRequestModel model)
         {
             return await _dbContext.Events
+                .AsNoTracking()
                 .Where(e => e.Date.Year == model.Year && e.Date.Month == (int)model.Month)
                 .GroupBy(g => g.Date.Day)
                 .Select(e => new GetDaysWithEventsResponseModel

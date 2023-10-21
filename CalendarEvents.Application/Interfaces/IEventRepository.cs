@@ -7,6 +7,6 @@ namespace CalendarEvents.Application.Interfaces
     {
         Task AddEventsAsync(CreateEventsRequestModel model);
 
-        Task<List<GetDaysWithEventsResponseModel>> GetAllDaysWithEventsByMonth(GetDaysWithEventsRequestModel model);
+        Task<List<GetDaysWithEventsResponseModel>> GetByMonthAsync(GetDaysWithEventsRequestModel model);
     }
 }

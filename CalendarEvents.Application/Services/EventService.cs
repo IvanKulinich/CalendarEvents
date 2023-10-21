@@ -6,21 +6,22 @@ namespace CalendarEvents.Application.Services
 {
     public class EventService : IEventService
     {
-        private readonly IEventRepository _eventRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public EventService(IEventRepository eventRepository)
+        public EventService(IUnitOfWork unitOfWork)
         {
-            _eventRepository = eventRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task AddEventsAsync(CreateEventsRequestModel model)
         {
-            await _eventRepository.AddEventsAsync(model);
+            await _unitOfWork.Events.AddEventsAsync(model);
+            await _unitOfWork.SaveAsync();
         }
 
-        public async Task<List<GetDaysWithEventsResponseModel>> GetAllDaysWithEventsByMonth(GetDaysWithEventsRequestModel model)
+        public async Task<List<GetDaysWithEventsResponseModel>> GetByMonthAsync(GetDaysWithEventsRequestModel model)
         {
-            return await _eventRepository.GetAllDaysWithEventsByMonth(model);
+            return await _unitOfWork.Events.GetByMonthAsync(model);
         }
     }
 }

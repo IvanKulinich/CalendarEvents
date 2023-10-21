@@ -53,13 +53,13 @@ namespace CalendarEvents.API.Controllers
                     return BadRequest("Request model is NULL");
                 }
 
-                var days = await _eventService.GetAllDaysWithEventsByMonth(model);
-                if (!days.Any())
+                var eventsByMonth = await _eventService.GetByMonthAsync(model);
+                if (!eventsByMonth.Any())
                 {
                     return NotFound();
                 }
 
-                return Ok(days);
+                return Ok(eventsByMonth);
             }
             catch (Exception ex)
             {
